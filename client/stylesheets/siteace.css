@@ -2,3 +2,8 @@
 .hidden_div{
 	display:none;
 }
+
+.searchBox{
+ margin-top: 10px;
+ margin-right: 10px;
+}

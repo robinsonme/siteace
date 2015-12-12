@@ -1,0 +1,15 @@
+<template name="website_single">
+  <a href="{{url}}">{{title}}</a>
+  <p>
+    {{description}}
+  </p>
+  <a href="#" class="btn btn-default js-upvote">
+    <span class="glyphicon glyphicon-arrow-up" aria-hidden="true">{{upVote}}</span>
+  </a>
+  <a href="#" class="btn btn-default js-downvote">
+    <span class="glyphicon glyphicon-arrow-down" aria-hidden="true">{{downVote}}</span>
+  </a>
+  <!-- you will be putting your up and down vote buttons in here! -->
+  <a href="/" role="button" class="btn btn-info">Home</a>
+  {{> website_comments}}
+</template>

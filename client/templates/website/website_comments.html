@@ -1,0 +1,38 @@
+<template name="website_comments">
+  <br/>
+  {{#if currentUser}}
+    {{> addComment }}
+  {{/if}}
+  <ol>
+    {{> comments}}
+  </ol>
+</template>
+
+<template name="comments">
+  {{#each comment}}
+    <li>
+      <p>
+        {{text}}
+      </p>
+      <p>
+        by: {{createdBy}} on {{localTime createdOn}}
+      </p>
+    </li>
+  {{/each}}
+</template>
+
+<template name="addComment">
+  <a class="btn btn-default js-toggle-comment-form" href="#">
+  		<span class="glyphicon glyphicon-plus" aria-hidden="true"> Comment ({{comments}})</span>
+	</a>
+  <div id="comment_form" class="hidden_div">
+    <form class="js-save-comment-form">
+        <div class="form-group">
+        <label for="comment">Comment</label>
+        <input type="text" class="form-control" id="comment" placeholder="I love to hear myself talk...">
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</template>

@@ -1,4 +1,4 @@
-Template.website_item.helpers({
+Template.website_single.helpers({
   "localTime": function(date) {
     if (date) {
       return moment(date).format('llll');
@@ -6,7 +6,7 @@ Template.website_item.helpers({
   }
 });
 
-Template.website_item.events({
+Template.website_single.events({
   "click .js-upvote":function(event){
     event.preventDefault(); // prevent the button from reloading the page
     // example of how you can access the id for the website in the database
