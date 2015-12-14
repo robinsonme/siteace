@@ -11,7 +11,7 @@ Template.website_item.events({
     event.preventDefault(); // prevent the button from reloading the page
     // example of how you can access the id for the website in the database
     // (this is the data context for the template)
-    var website_id = this._id;
+    var website_id = this.__originalId;
     // put the code in here to add a vote to a website!
     Meteor.call("vote_website", website_id, "upVote");
   },

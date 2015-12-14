@@ -1,8 +1,12 @@
 <!-- template that displays several website items -->
 <template name="website_list">
-	<ol>
-  	{{#each websites}}
-  	 {{>website_item}}
-  	{{/each}}
-	</ol>
+	<div class="searchBox">
+		Search: {{> EasySearch.Input index=websitesIndex}}
+
+		<ol>
+			{{#EasySearch.Each index=websitesIndex}}
+				{{> website_item}}
+			{{/EasySearch.Each}}
+		</ol>
+	</div>
 </template>
